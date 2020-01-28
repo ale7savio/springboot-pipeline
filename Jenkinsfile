@@ -4,12 +4,13 @@ pipeline {
 
     stages {
 
-        stage('Download') {
+      stage('Build') {
           steps {
-            sh '''
-              git clone https://github.com/ale7savio/springboot-pipeline
-              '''
+              sh '''
+                 jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
+                 jenkins/scripts/build.sh
+                '''
           }
-        }
+      }
     }
 }
