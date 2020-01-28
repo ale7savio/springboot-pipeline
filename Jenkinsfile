@@ -20,9 +20,11 @@ pipeline {
                   '''
             }
             post {
+                /*
                 success {
-                    /* archiveArtifacts artifacts: 'java-app/target/*.jar', fingerprint: true */
+                    archiveArtifacts artifacts: 'java-app/target/*.jar', fingerprint: true
                 }
+                */
             }
 
         }
@@ -31,9 +33,11 @@ pipeline {
 		          sh 'jenkins/scripts/test.sh mvn test'
             }
             post {
+              /*
                 always {
-                    /* junit 'java-app/target/surefire-reports/*.xml' */
+                    junit 'java-app/target/surefire-reports/*.xml'
                 }
+              */
             }
         }
         stage('Push') {
