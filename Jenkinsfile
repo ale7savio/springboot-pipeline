@@ -15,35 +15,35 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-			             ./jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
-			             ./jenkins/scripts/build.sh
+			             jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
+			             jenkins/scripts/build.sh
                   '''
             }
             post {
                 success {
-                    archiveArtifacts artifacts: 'java-app/target/*.jar', fingerprint: true
+                    /* archiveArtifacts artifacts: 'java-app/target/*.jar', fingerprint: true */
                 }
             }
 
         }
         stage('Test') {
             steps {
-		          sh './jenkins/scripts/test.sh mvn test'
+		          sh 'jenkins/scripts/test.sh mvn test'
             }
             post {
                 always {
-                    junit 'java-app/target/surefire-reports/*.xml'
+                    /* junit 'java-app/target/surefire-reports/*.xml' */
                 }
             }
         }
         stage('Push') {
             steps {
-		          ./jenkins/scripts/push.sh
+		          sh 'jenkins/scripts/push.sh'
             }
         }
         stage('Deploy') {
             steps {
-       		   sh './jenkins/scripts/deploy.sh'
+       		   sh 'jenkins/scripts/deploy.sh'
             }
         }
     }
