@@ -7,11 +7,18 @@ pipeline {
         stage('Download') {
           steps {
             sh '''
-              echo "Descargando"
+              git clone https://github.com/ale7savio/springboot-pipeline
               '''
           }
         }
 
-        
+        stage('Build') {
+            steps {
+                sh '''
+			             jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
+			             jenkins/scripts/build.sh
+                  '''
+            }
+        }
     }
 }
