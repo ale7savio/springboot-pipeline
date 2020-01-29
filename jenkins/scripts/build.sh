@@ -7,6 +7,6 @@ echo "######################"
 echo "*** Building image ***"
 echo "######################"
 
-echo $BUILD_TAG
+echo ${env.BUILD_ID}
 
 cd docker/ && docker-compose -f docker-compose-build.yml build --no-cache
