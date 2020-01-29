@@ -7,7 +7,7 @@ pipeline {
       stage('Enviroments') {
           steps {
             sh '''
-              export PRUEBA = 234
+              export TAG = ""$BUILD_ID"
             '''
           }
       }
