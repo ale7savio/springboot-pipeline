@@ -12,6 +12,9 @@ VERSION=$BUILD_TAG
 echo $IMAGE:$VERSION $REGISTRY/$IMAGE:$VERSION
 
 echo "*** Tagging image ***"
-sudo docker tag $IMAGE:$VERSION $REGISTRY/$IMAGE:$VERSION
+#sudo docker tag $IMAGE:$VERSION $REGISTRY/$IMAGE:$VERSION
 echo "*** Pushing image ***"
-sudo docker push $REGISTRY/$IMAGE:$VERSION
+#sudo docker push $REGISTRY/$IMAGE:$VERSION
+
+#docker tag springboot-pipeline:jenkins-pipeline-tests-8 35.246.237.70:5000/springboot-pipeline:jenkins-pipeline-tests-8
+#docker push 35.246.237.70:5000/springboot-pipeline:jenkins-pipeline-tests-63

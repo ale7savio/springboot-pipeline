@@ -12,21 +12,20 @@ pipeline {
                 '''
           }
       }
-
+      /*
       stage('Push') {
           steps {
             sh '''
-              chmod +x jenkins/scripts/push.sh
               jenkins/scripts/push.sh
             '''
           }
       }
+      */
 
       /*
       stage('Deploy') {
           steps {
             sh '''
-              chmod +x jenkins/scripts/deploy.sh
               jenkins/scripts/deploy.sh
             '''
           }
