@@ -15,7 +15,7 @@ pipeline {
       stage('Build') {
           steps {
               sh '''
-                 echo whoami
+                 whoami
                  jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
                 '''
           }
