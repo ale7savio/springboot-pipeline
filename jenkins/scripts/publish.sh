@@ -4,5 +4,4 @@
 #export IMAGE=$(sed -n '1p' /tmp/.springboot-pipeline-info)
 #export TAG=$(sed -n '2p' /tmp/.springboot-pipeline-info)
 
-whoami
-#cd ~/../apps/springboot-pipeline/ && sudo docker-compose up -d
+cd ~/../apps/springboot-pipeline/ && docker-compose up -d
