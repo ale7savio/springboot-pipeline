@@ -4,13 +4,21 @@ pipeline {
 
     stages {
 
+      stage('Enviroments') {
+          steps {
+            sh '''
+              export $TAG = $BUILD_ID
+            '''
+          }
+      }
+
       stage('Build') {
           steps {
               sh '''
                   echo "primero"
-                  echo $BUILD_ID
+                  echo $TAG
                   echo "segundo"
-                  sudo echo $BUILD_ID
+                  sudo echo $TAG
                  jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
                  jenkins/scripts/build.sh
                 '''
