@@ -1,11 +1,7 @@
 #!/bin/bash
 
 # Copia el jar
-
-sudo su
 cp -f target/*.jar docker/
-
-whoami
 
 echo "######################"
 echo "*** Building image ***"
