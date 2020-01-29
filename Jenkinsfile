@@ -12,7 +12,7 @@ pipeline {
                 '''
           }
       }
-      /*
+
       stage('Push') {
           steps {
             sh '''
@@ -20,7 +20,6 @@ pipeline {
             '''
           }
       }
-      */
 
       /*
       stage('Deploy') {
