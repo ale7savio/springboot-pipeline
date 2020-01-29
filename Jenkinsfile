@@ -2,20 +2,15 @@ pipeline {
 
     agent any
 
-    stages {
+    environment {
+      TAG = 1
+    }
 
-      stage('Enviroments') {
-          steps {
-            sh '''
-              export TAG=$BUILD_ID
-            '''
-          }
-      }
+    stages {
 
       stage('Build') {
           steps {
               sh '''
-                 jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
                  jenkins/scripts/build.sh
                 '''
           }

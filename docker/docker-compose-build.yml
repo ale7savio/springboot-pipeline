@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: "springboot-pipeline:$TAG"
+    image: "springboot-pipeline:env.TAG"
     build:
       context: .
       dockerfile: Dockerfile-Java
