@@ -7,7 +7,10 @@ pipeline {
       stage('Build') {
           steps {
               sh '''
+                  echo "primero"
                   echo $BUILD_ID
+                  echo "segundo"
+                  sudo echo $BUILD_ID
                  jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
                  jenkins/scripts/build.sh
                 '''
