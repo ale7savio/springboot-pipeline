@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     stages {
-
+      /*
       stage('Build') {
           steps {
               sh '''
@@ -12,6 +12,7 @@ pipeline {
                 '''
           }
       }
+      */
 
       stage('Push') {
           steps {
@@ -21,7 +22,10 @@ pipeline {
 
       stage('Deploy') {
           steps {
-           sh 'jenkins/scripts/deploy.sh'
+            sh '''
+              chmod +x jenkins/scripts/deploy.sh
+              jenkins/scripts/deploy.sh
+            '''
           }
       }
 
