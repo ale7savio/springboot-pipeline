@@ -7,7 +7,7 @@ pipeline {
       stage('Enviroments') {
           steps {
             sh '''
-              export TAG = "dfsgdg"
+              export VERSION = "dfsgdg"
             '''
           }
       }
