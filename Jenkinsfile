@@ -7,7 +7,7 @@ pipeline {
       stage('Build') {
           steps {
               sh '''
-                 sudo jenkins/scripts/build.sh
+                echo ${BUILD_ID}
                 '''
           }
       }
