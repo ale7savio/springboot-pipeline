@@ -8,4 +8,4 @@ echo "######################"
 echo "*** Building image ***"
 echo "######################"
 
-cd docker/ && docker-compose -f docker-compose-build.yml build --no-cache
+cd docker/ && sudo docker-compose -f docker-compose-build.yml build --no-cache
