@@ -12,6 +12,6 @@ VERSION=$BUILD_TAG
 echo $IMAGE:$VERSION $REGISTRY/$IMAGE:$VERSION
 
 echo "*** Tagging image ***"
-docker tag $IMAGE:$VERSION $REGISTRY/$IMAGE:$VERSION
+sudo docker tag $IMAGE:$VERSION $REGISTRY/$IMAGE:$VERSION
 echo "*** Pushing image ***"
-docker push $REGISTRY/$IMAGE:$VERSION
+sudo docker push $REGISTRY/$IMAGE:$VERSION
