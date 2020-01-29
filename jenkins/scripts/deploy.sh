@@ -21,9 +21,9 @@
 
 #Copio el script que levanta el servicio
 #sudo chmod -R 777 jenkins/scripts/key/jenkinsinstancenopass
-scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/publish alejandro.munoz@35.234.98.81:/tmp/publish
+scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/publish.sh alejandro.munoz@35.234.98.81:/tmp/publish.sh
 #Copio el docker-compose y el .evn para levantar el servcio, en el .evn estan los parametros que necesita el servcio
 scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/compose/docker-compose.yml alejandro.munoz@35.234.98.81:~/springboot-pipeline/
 scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/compose/.env alejandro.munoz@35.234.98.81:~/springboot-pipeline/
 #Ejecuto el script que levanta el servicio
-ssh -i ../../keys/jenkinsinstancenopass alejandro.munoz@35.234.98.81 /tmp/publish
+ssh -i ../../keys/jenkinsinstancenopass alejandro.munoz@35.234.98.81 /tmp/publish.sh
