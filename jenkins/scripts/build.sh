@@ -7,8 +7,6 @@ echo "######################"
 echo "*** Building image ***"
 echo "######################"
 
-echo $BUILD_ID
-export TAG=$BUILD_ID
-echo $TAG
+SUDO_GID=1006
 
 cd docker/ && sudo docker-compose -f docker-compose-build.yml build --no-cache
