@@ -12,12 +12,13 @@ pipeline {
                 '''
           }
       }
-
+      /*
       stage('Push') {
           steps {
             sh 'jenkins/scripts/push.sh'
           }
       }
+      */
 
       /*
       stage('Deploy') {
