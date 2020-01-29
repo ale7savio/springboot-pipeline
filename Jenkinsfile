@@ -4,17 +4,10 @@ pipeline {
 
     stages {
 
-      stage('Enviroments') {
-          steps {
-            sh '''
-              export TAG=$BUILD_ID
-            '''
-          }
-      }
-
       stage('Build') {
           steps {
               sh '''
+
                  jenkins/scripts/build.sh
                 '''
           }
