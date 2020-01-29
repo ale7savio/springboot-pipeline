@@ -7,7 +7,7 @@ pipeline {
       stage('Enviroments') {
           steps {
             sh '''
-              export VERSION = $BUILD_ID
+              export dfgf = $BUILD_ID
             '''
           }
       }
