@@ -2,11 +2,15 @@ pipeline {
 
     agent any
 
-    environment {
-      TAG = 1
-    }
-
     stages {
+
+      stage('Enviroments') {
+          steps {
+            sh '''
+              sudo export TAG=$BUILD_ID
+            '''
+          }
+      }
 
       stage('Build') {
           steps {
