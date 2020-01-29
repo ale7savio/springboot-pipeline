@@ -7,7 +7,7 @@ pipeline {
       stage('Enviroments') {
           steps {
             sh '''
-              export PRUEBA = "dfsgdg"
+              export TAG=BUILD_ID
             '''
           }
       }
