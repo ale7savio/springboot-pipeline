@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     stages {
-      /*
+
       stage('Build') {
           steps {
               sh '''
@@ -12,7 +12,6 @@ pipeline {
                 '''
           }
       }
-      */
 
       stage('Push') {
           steps {
