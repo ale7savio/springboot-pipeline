@@ -4,19 +4,11 @@ pipeline {
 
     stages {
 
-      stage('Root') {
-        steps {
-          sh '''
-            sudo su
-          '''
-        }
-      }
-
       stage('Build') {
           steps {
               sh '''
-                 whoami
                  jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
+                 jenkins/scripts/build.sh
                 '''
           }
       }
