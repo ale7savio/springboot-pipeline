@@ -15,10 +15,6 @@ pipeline {
       stage('Build') {
           steps {
               sh '''
-                  echo "primero"
-                  echo $TAG
-                  echo "segundo"
-                  sudo echo $TAG
                  jenkins/scripts/mvn.sh mvn -B -DskipTests clean package
                  jenkins/scripts/build.sh
                 '''
