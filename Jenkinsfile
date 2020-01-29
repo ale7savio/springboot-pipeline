@@ -7,7 +7,7 @@ pipeline {
       stage('Enviroments') {
           steps {
             sh '''
-              export $TAG = $BUILD_ID
+              export TAG = $BUILD_ID
             '''
           }
       }
