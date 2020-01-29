@@ -17,9 +17,12 @@
 
 #scp -i key/testsjenkinsnopass infoversion/.springboot-pipeline-info  alejandro.munoz@35.246.237.70:/tmp/.springboot-pipeline-info
 
-scp -i key/testsjenkinsnopass publish alejandro.munoz@35.246.237.70:/tmp/publish
+#Deberia ser en el kubernetes donde se despliegua el proyecto
 
-scp -i key/testsjenkinsnopass compose/docker-compose.yml alejandro.munoz@35.246.237.70:~/springboot-pipeline/
-scp -i key/testsjenkinsnopass compose/.env alejandro.munoz@35.246.237.70:~/springboot-pipeline/
-
-ssh -i key/testsjenkinsnopass alejandro.munoz@35.246.237.70 /tmp/publish
+#Copio el script que levanta el servicio
+scp -i jenkins/scripts/key/testsjenkinsnopass publish alejandro.munoz@35.246.237.70:/tmp/publish
+#Copio el docker-compose y el .evn para levantar el servcio, en el .evn estan los parametros que necesita el servcio
+scp -i jenkins/scripts/key/testsjenkinsnopass compose/docker-compose.yml alejandro.munoz@35.246.237.70:~/springboot-pipeline/
+scp -i jenkins/scripts/key/testsjenkinsnopass compose/.env alejandro.munoz@35.246.237.70:~/springboot-pipeline/
+#Ejecuto el script que levanta el servicio
+ssh -i jenkins/scripts/key/testsjenkinsnopass alejandro.munoz@35.246.237.70 /tmp/publish
