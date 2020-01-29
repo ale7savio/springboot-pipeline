@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: "springboot-pipeline:$SUDO_GID"
+    image: "springboot-pipeline:$TAG"
     build:
       context: .
       dockerfile: Dockerfile-Java
