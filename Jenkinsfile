@@ -16,7 +16,7 @@ pipeline {
 
       stage('Push') {
           steps {
-            chmod +x jenkins/scripts/deploy.sh
+            chmod +x jenkins/scripts/push.sh
             sh 'jenkins/scripts/push.sh'
           }
       }
