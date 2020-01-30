@@ -21,4 +21,4 @@ docker push $REGISTRY/$IMAGE:$VERSION
 
 #Borramos la imagen creada para limpiar jenkins
 #docker images --filter reference='*pringboot-pipeline*'
-docker rmi -f $(docker images --filter reference='*pringboot-pipeline*' -q)
+docker rmi -f $(docker images --filter reference='*springboot-pipeline*' -q)
