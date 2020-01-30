@@ -7,4 +7,5 @@ export TAG=$(sed -n '1p' /tmp/.springboot-pipeline-info)
 cd ~/../apps/springboot-pipeline/ && docker-compose up -d
 
 #Finalmente eliminamos las imagenes creadas
+docker image prune -a -f --filter 'until=50h'
 docker rmi -f $(docker images --filter reference='*/springboot-pipeline*' -q)
