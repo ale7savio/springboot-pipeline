@@ -22,7 +22,7 @@
 #PRIMERO PARA QUE GENERE LAS KEYS
 #ssh alejandro_munoz@35.234.98.81
 
-echo $BUILD_TAG >> /tmp/.springboot-pipeline-info
+echo $BUILD_ID >> /tmp/.springboot-pipeline-info
 
 #Copio el script que levanta el servicio
 #sudo chmod -R 777 jenkins/scripts/key/jenkinsinstancenopass
