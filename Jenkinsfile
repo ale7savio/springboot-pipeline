@@ -35,5 +35,13 @@ pipeline {
           }
       }
 
+      stage('Delete Registry') {
+          steps {
+            sh '''
+              jenkins/scripts/registry-delete.sh
+            '''
+          }
+      }
+
     }
 }
