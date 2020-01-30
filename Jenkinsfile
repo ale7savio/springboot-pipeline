@@ -11,6 +11,11 @@ pipeline {
                  jenkins/scripts/build.sh
                 '''
           }
+          post {
+              success {
+                  archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+              }
+          }
       }
 
       stage('Push') {
