@@ -18,3 +18,7 @@ docker push $REGISTRY/$IMAGE:$VERSION
 
 #docker tag springboot-pipeline:1 35.246.237.70:5000/springboot-pipeline:1
 #docker push 35.246.237.70:5000/springboot-pipeline:1
+
+#Borramos la imagen creada para limpiar jenkins
+#docker images --filter reference='*pringboot-pipeline*'
+docker rmi -f $(docker images --filter reference='*pringboot-pipeline*' -q)
