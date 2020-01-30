@@ -3,3 +3,5 @@ services:
   app:
     image: "${REGISTRY}/${IMAGE}:${TAG}"
     container_name: springboot-pipeline
+    ports:
+      - "80:80"
