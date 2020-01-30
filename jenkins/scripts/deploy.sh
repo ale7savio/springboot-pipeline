@@ -31,4 +31,4 @@ scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/compose/.env alejandro_m
 #Ejecuto el script que levanta el servicio
 
 echo $BUILD_ID
-#ssh -i ../../keys/jenkinsinstancenopass alejandro_munoz@35.234.98.81 /tmp/publish.sh
+ssh -i ../../keys/jenkinsinstancenopass alejandro_munoz@35.234.98.81 /tmp/publish.sh

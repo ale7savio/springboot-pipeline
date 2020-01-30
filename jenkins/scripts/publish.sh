@@ -7,4 +7,4 @@
 
 whoami
 echo $BUILD_ID
-cd ~/../apps/springboot-pipeline/ && docker-compose up -d
+#cd ~/../apps/springboot-pipeline/ && docker-compose up -d
