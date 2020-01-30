@@ -1,10 +1,9 @@
 #!/bin/bash
 
-#export REGISTRY="35.246.237.70:5000"
-#export IMAGE=$(sed -n '1p' /tmp/.springboot-pipeline-info)
-#export TAG=$(sed -n '2p' /tmp/.springboot-pipeline-info)
+#export REGISTRY="35.234.98.81:5000"
+#export IMAGE="springboot-pipeline"
+#export TAG=$(sed -n '1p' /tmp/.springboot-pipeline-info)
 
 
 whoami
-echo $BUILD_ID
-#cd ~/../apps/springboot-pipeline/ && docker-compose up -d
+cd ~/../apps/springboot-pipeline/ && docker-compose up -d

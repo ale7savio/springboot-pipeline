@@ -22,13 +22,15 @@
 #PRIMERO PARA QUE GENERE LAS KEYS
 #ssh alejandro_munoz@35.234.98.81
 
+echo $BUILD_TAG >> /tmp/.springboot-pipeline-info
+
 #Copio el script que levanta el servicio
 #sudo chmod -R 777 jenkins/scripts/key/jenkinsinstancenopass
+scp -i ../../keys/jenkinsinstancenopass /tmp/.springboot-pipeline-info alejandro_munoz@35.234.98.81:/tmp/.springboot-pipeline-info
 scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/publish.sh alejandro_munoz@35.234.98.81:/tmp/publish.sh
 #Copio el docker-compose y el .evn para levantar el servcio, en el .evn estan los parametros que necesita el servcio
 scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/compose/docker-compose.yml alejandro_munoz@35.234.98.81:~/../apps/springboot-pipeline/
 scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/compose/.env alejandro_munoz@35.234.98.81:~/../apps/springboot-pipeline/
 #Ejecuto el script que levanta el servicio
 
-echo $BUILD_ID
 ssh -i ../../keys/jenkinsinstancenopass alejandro_munoz@35.234.98.81 /tmp/publish.sh
