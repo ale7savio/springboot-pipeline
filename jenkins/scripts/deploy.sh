@@ -26,4 +26,4 @@ scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/publish.sh alejandro_mun
 scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/compose/docker-compose.yml alejandro_munoz@35.234.98.81:~/../apps/springboot-pipeline/
 scp -i ../../keys/jenkinsinstancenopass jenkins/scripts/compose/.env alejandro_munoz@35.234.98.81:~/../apps/springboot-pipeline/
 #Ejecuto el script que levanta el servicio
-ssh -i ../../keys/jenkinsinstancenopass alejandro_munoz@35.234.98.81 /tmp/publish.sh
+#ssh -i ../../keys/jenkinsinstancenopass alejandro_munoz@35.234.98.81 /tmp/publish.sh
